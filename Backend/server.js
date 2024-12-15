@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const cors = require('cors');
-
+const path = require('path');
 const app = express();
 const PORT = 5000;
 
@@ -20,6 +20,7 @@ app.use(bodyParser.json());
 
 // Serve static files (HTML, CSS, JS)
 app.use('/html', express.static('E:/Webpage/portfolio 3'));
+app.use('/html', express.static(path.join(__dirname, 'static')));
 
 // Form submission endpoint
 app.post('/submit-form', (req, res) => {
@@ -34,6 +35,7 @@ app.post('/submit-form', (req, res) => {
         res.send('Form submitted successfully!');
     });
 });
+
 
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);

@@ -1,9 +1,13 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      }
-    ]
-  }
-  
+  "functions": {
+    "Backend/server.js": {
+      "runtime": "nodejs16.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/Backend/server.js"
+    }
+  ]
+}
