@@ -20,7 +20,17 @@ app.use(bodyParser.json());
 
 // Serve static files (HTML, CSS, JS)
 app.use('/html', express.static('E:/Webpage/portfolio 3'));
-app.use('/html', express.static(path.join(__dirname, 'static')));
+app.use(express.static(path.join(__dirname, "../static")));
+
+
+app.get("/api/hello", (req, res) => {
+    res.send({ message: "Hello from Vercel!" });
+});
+
+
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../static/index.html"));
+});
 
 // Form submission endpoint
 app.post('/submit-form', (req, res) => {

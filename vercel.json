@@ -1,13 +1,17 @@
 {
-  "functions": {
-    "Backend/server.js": {
-      "runtime": "nodejs16.x"
-    }
-  },
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/Backend/server.js"
+      "src": "Backend/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "static/**",
+      "use": "@vercel/static"
     }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/static/index.html" },
+    { "src": "/api/(.*)", "dest": "Backend/server.js" }
   ]
 }
