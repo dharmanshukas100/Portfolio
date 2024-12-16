@@ -12,6 +12,7 @@
   ],
   "routes": [
     { "src": "/", "dest": "/static/index.html" },
+    { "src": "/projects", "dest": "/static/projects.html" },
     { "src": "/api/(.*)", "dest": "Backend/server.js" }
   ]
 }
