@@ -1,0 +1,107 @@
+#stud-img-intro #image-con {
+    display: block;
+    padding: 10px;
+    margin: auto;
+    margin-top: 43px;
+}
+#stud-img-intro hr {
+    display: none;
+}
+#stud-img-intro #intro-about {
+    display: block;
+    margin: 8% auto;
+    text-align: center;
+    animation: fadeInAnimation ease-out 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 310px;
+}
+
+#about-me #code-graph #code-chart {
+    width: 385px;
+}
+#footer{
+    padding: 18px 21px;
+    background-color: black;
+
+}
+#footer #connect{
+    flex-direction: column;
+}
+/* #footer #connect #social-con{
+} */
+#footer #connect #social-con ul{
+    display: flex;
+    justify-content: center;
+    padding-left: 0%;
+    align-items: center;
+    list-style: none;
+}
+#footer #connect #social-con ul li {
+    padding: 1px;
+}
+
+
+#hamburger-menu {
+    display: flex;
+    padding-right: 27px;
+}
+.nav-div{
+    position: absolute;
+    right: 12px;
+    top: 10px;
+}
+
+#nav-item {
+    display: none;
+    flex-direction: column;
+    background: #f5f5f5;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#nav-item.active {
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid #7b0bff33;
+}
+
+#nav-item-list {
+    flex-direction: column;
+    gap: 10px;
+}
+
+#nav-item-list li a {
+    color: #000;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#nav-item-list li a:hover {
+    background: #ddd;
+}
+
+#stud-img-intro {
+    flex-direction: column;
+}
+
+.tools-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+    grid-column-gap: 18px;
+    grid-row-gap: 6px;
+}
+
+.tool-card {
+    padding: 10px;
+    width: 111px;
+}
+
+.skill-list {
+    grid-template-columns: repeat(auto-fill, minmax(213px, auto));
+}

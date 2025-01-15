@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Portfolio of Dharmanshu Kashyap, showcasing skills, projects, and contact details.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dharmanshu Kashyap</title>
     <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 765px)" href="../static/tab.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
@@ -16,14 +18,21 @@
             <div id="name-stud">
                 <h1 class="contain-name">Dharmanshu Kashyap</h1>
             </div>
-            <div id="nav-item">
-                <ul id="nav-item-list">
-                    <li><a href="../static/MAIN CV RESUME.pdf" target="_blank">Resume</a></li>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/#about-me">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-
-                </ul>
+            <div id="hamburger-menu" onclick="toggleMenu()">
+                <!-- Hamburger icon -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-div">
+                <div id="nav-item">
+                    <ul id="nav-item-list">
+                        <li><a href="../static/MAIN CV RESUME.pdf" target="_blank">Resume</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/#about-me">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section id="stud-img-intro">
@@ -47,31 +56,64 @@
                     Hello! My name is Dharmanshu Kashyap. I am currently pursuing a Bachelor of Technology in Computer Science from Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore, and I am expected to graduate in 2025. I am passionate about software development, particularly in web application development. With proficiency in front-end and back-end technologies such as HTML, CSS, JavaScript, React, Node.js, and MongoDB, I specialize in creating dynamic and responsive web applications that offer seamless user experiences. I have worked on impactful projects, including CoWatch, a virtual theater platform, and Podicast, a podcast hosting solution. In addition to coding, I have represented my school in inter-school handball competitions, showcasing teamwork and dedication. I am continuously enhancing my skills in full-stack development, with a keen focus on AI integration as it plays a vital role in modern technologies. I am also learning programming languages like C++, Java, and Python, along with exploring cloud computing to stay aligned with the latest industry trends.
                 </p>
             </div>
+            
             <div id="code-graph">
-                <h1 id="graph-h1">Learning-Graph</h1>
-                <div id="code-chart">
-                    <h1>Python</h1>
-                    <div id="percent-p" class="graph-cmpare">
-                        <!-- <h3>0%</h3> -->
+                <h1 id="graph-h1">Skills</h1>
+                <ul class="skill-list">
+                    <li class="skill-item">Python</li>
+                    <li class="skill-item">C</li>
+                    <li class="skill-item">C++</li>
+                    <li class="skill-item">Java</li>
+                    <li class="skill-item">JavaScript</li>
+                    <li class="skill-item">HTML/CSS</li>
+                    <li class="skill-item">MySQL</li>
+                    <li class="skill-item">MongoDB</li>
+                    <li class="skill-item">Node.js</li>
+                    <li class="skill-item">React</li>
+                    <li class="skill-item">Pandas</li>
+                    <li class="skill-item">NumPy</li>
+                    <li class="skill-item">Matplotlib</li>
+                </ul>
+            </div>
+            
+            <div id="Tools-sec">
+                <h1 class="section-title">Tools I Use</h1>
+                <div class="tools-container">
+                    <div class="tool-card">
+                        <img src="../static/vscode.png" alt="VS Code">
+                        <p>VS Code</p>
                     </div>
-                    <h1>C</h1>
-                    <div id="percent-c" class="graph-cmpare">
-                        <!-- <h3>0%</h3> -->
+                    <div class="tool-card">
+                        <img src="../static/tailwind.png" alt="Tailwind CSS">
+                        <p>Tailwind CSS</p>
                     </div>
-                    <h1>C++</h1>
-                    <div id="percent-c2" class="graph-cmpare">
-                        <!-- <h3>0%</h3> -->
+                    <div class="tool-card">
+                        <img src="../static/git.webp" alt="Git">
+                        <p>Git</p>
                     </div>
-                    <h1>Web Development</h1>
-                    <div id="percent-wd" class="graph-cmpare">
-                        <!-- <h3>0%</h3> -->
+                    <div class="tool-card">
+                        <img src="../static/jupyter.png" alt="Jupyter">
+                        <p>Jupyter</p>
                     </div>
-                    <h1>Java</h1>
-                    <div id="percent-j" class="graph-cmpare">
-                        <!-- <h3>0%</h3> -->
+                    <div class="tool-card">
+                        <img src="../static/spyder.png" alt="Spyder">
+                        <p>Spyder</p>
+                    </div>
+                    <div class="tool-card">
+                        <img src="../static/mysql.png" alt="MySQL Workbench">
+                        <p>MySQL Workbench</p>
+                    </div>
+                    <div class="tool-card">
+                        <img src="../static/postman.png" alt="Postman">
+                        <p>Postman</p>
+                    </div>
+                    <div class="tool-card">
+                        <img src="../static/firebase.png" alt="Firebase">
+                        <p>Firebase</p>
                     </div>
                 </div>
             </div>
+            
         </section>
         <section id="footer">
             <div id="connect">
@@ -117,6 +159,16 @@
 
         
     </section>
-    
+    <script>
+    function toggleMenu() {
+    const navItem = document.getElementById("nav-item");
+    navItem.classList.toggle("active");
+    document.querySelectorAll("#nav-item-list li a").forEach(link => {
+        link.addEventListener("click", () => {
+            navItem.classList.remove("active");
+        });
+    });
+    }
+    </script>
 </body>
 </html>
