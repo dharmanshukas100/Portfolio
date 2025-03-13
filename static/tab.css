@@ -103,5 +103,5 @@
 }
 
 .skill-list {
-    grid-template-columns: repeat(auto-fill, minmax(213px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(119px, auto));
 }
